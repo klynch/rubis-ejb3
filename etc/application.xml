@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/application_5.xsd"
+  version="5">
+
+
+  <description>RUBiS EJB3</description>
+  <display-name>RUBiS EJB3</display-name>
+
+  <!-- EJB Modules -->
+  <module>
+    <ejb>rubis.jar</ejb>
+  </module>
+
+  <!-- Web Modules -->
+  <module>
+    <web>
+      <web-uri>rubis.war</web-uri>
+      <context-root>rubis</context-root>
+    </web>
+  </module>
+</application>
