@@ -32,7 +32,7 @@ public class BuyNowAuth extends HttpServlet
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     ServletPrinter sp = null;
-    sp = new ServletPrinter(response, "BuyNowAuth");
+    sp = new ServletPrinter(response, "BuyNowAuth", getServletContext());
     
     String value = request.getParameter("itemId");
     if ((value == null) || (value.equals("")))

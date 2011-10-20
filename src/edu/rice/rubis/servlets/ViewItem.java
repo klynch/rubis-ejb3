@@ -45,7 +45,7 @@ public class ViewItem extends HttpServlet
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     ServletPrinter sp = null;
-    sp = new ServletPrinter(response, "ViewItem");
+    sp = new ServletPrinter(response, "ViewItem", getServletContext());
     
     String value = request.getParameter("itemId");
     if ((value == null) || (value.equals("")))

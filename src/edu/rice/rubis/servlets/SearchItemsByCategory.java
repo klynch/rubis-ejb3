@@ -115,7 +115,7 @@ public class SearchItemsByCategory extends HttpServlet
     Integer nbOfItems;
 
     categoryName = request.getParameter("categoryName");
-    sp = new ServletPrinter(response, "SearchItemsByCategory");
+    sp = new ServletPrinter(response, "SearchItemsByCategory", getServletContext());
     if ((value == null) || (value.equals("")))
     {
       printError("You must provide a category identifier!<br>", sp);

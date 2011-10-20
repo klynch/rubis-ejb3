@@ -39,7 +39,7 @@ public class BrowseCategories extends HttpServlet
     String  username=null, password=null;
     Context initialContext = null;
 
-    sp = new ServletPrinter(response, "BrowseCategories");
+    sp = new ServletPrinter(response, "BrowseCategories", getServletContext());
     sp.printHTMLheader("RUBiS available categories");
     sp.printHTML("<h2>Currently available categories</h2><br>");
     try

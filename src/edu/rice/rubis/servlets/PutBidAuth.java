@@ -33,7 +33,7 @@ public class PutBidAuth extends HttpServlet
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     ServletPrinter sp = null;
-    sp = new ServletPrinter(response, "PubBidAuth");
+    sp = new ServletPrinter(response, "PubBidAuth", getServletContext());
     
     String value = request.getParameter("itemId");
     if ((value == null) || (value.equals("")))

@@ -74,7 +74,7 @@ public class StoreBid extends HttpServlet
     int     maxQty; // maximum quantity available for this item
     int     qty;    // quantity asked by the user
 
-    sp = new ServletPrinter(response, "StoreBid");
+    sp = new ServletPrinter(response, "StoreBid", getServletContext());
 
     /* Get and check all parameters */
 

@@ -54,7 +54,7 @@ public class PutComment extends HttpServlet
     String itemStr = request.getParameter("itemId");
     String username = request.getParameter("nickname");
     String password = request.getParameter("password");
-    sp = new ServletPrinter(response, "PubComment");
+    sp = new ServletPrinter(response, "PubComment", getServletContext());
     
     if ((toStr == null) || (toStr.equals("")) ||
         (itemStr == null) || (itemStr.equals(""))||

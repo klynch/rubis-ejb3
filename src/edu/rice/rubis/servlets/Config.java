@@ -22,7 +22,7 @@ public class Config
   /**
    * Returns the path to the directory where the HTML header and footer are stored.
    */
-  public static final String HTMLFilesPath = "JONAS_BASE/webapps/autoload/rubis";
+  public static final String HTMLFilesPath = "";
 
 
   /**

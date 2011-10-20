@@ -61,7 +61,7 @@ public class ViewUserInfo extends HttpServlet
     String  value = request.getParameter("userId");
     Integer userId;
     
-    sp = new ServletPrinter(response, "ViewUserInfo");
+    sp = new ServletPrinter(response, "ViewUserInfo", getServletContext());
 
     if ((value == null) || (value.equals("")))
     {

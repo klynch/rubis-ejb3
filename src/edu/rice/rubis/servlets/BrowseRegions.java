@@ -37,7 +37,7 @@ public class BrowseRegions extends HttpServlet
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     ServletPrinter sp = null;
-    sp = new ServletPrinter(response, "BrowseRegions");
+    sp = new ServletPrinter(response, "BrowseRegions", getServletContext());
     sp.printHTMLheader("RUBiS: Available regions");
     sp.printHTML("<h2>Currently available regions</h2><br>");
  

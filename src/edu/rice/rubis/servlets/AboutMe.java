@@ -61,7 +61,7 @@ public class AboutMe extends HttpServlet
     String  password=null, username=null; 
     Integer userId=null;
     
-    sp = new ServletPrinter(response, "About me");
+    sp = new ServletPrinter(response, "About me", getServletContext());
 
     username = request.getParameter("nickname");
     password = request.getParameter("password");    

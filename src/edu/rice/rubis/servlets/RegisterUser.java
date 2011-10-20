@@ -56,7 +56,7 @@ public class RegisterUser extends HttpServlet
     int    userId;
     String creationDate, regionName;
 
-    sp = new ServletPrinter(response, "RegisterUser");
+    sp = new ServletPrinter(response, "RegisterUser", getServletContext());
       
     Context initialContext = null;
     try

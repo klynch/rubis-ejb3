@@ -75,7 +75,7 @@ public class StoreBuyNow extends HttpServlet
     int     maxQty; // maximum quantity available for this item
     int     qty;    // quantity asked by the user
 
-    sp = new ServletPrinter(response, "StoreBuyNow");
+    sp = new ServletPrinter(response, "StoreBuyNow", getServletContext());
 
     /* Get and check all parameters */
 

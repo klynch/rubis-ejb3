@@ -51,7 +51,7 @@ public class BuyNow extends HttpServlet
     String itemStr = request.getParameter("itemId");
     String name = request.getParameter("nickname");
     String pass = request.getParameter("password");
-    sp = new ServletPrinter(response, "BuyNow");
+    sp = new ServletPrinter(response, "BuyNow", getServletContext());
     
     if ((itemStr == null) || (itemStr.equals("")) ||
         (name == null) || (name.equals(""))||

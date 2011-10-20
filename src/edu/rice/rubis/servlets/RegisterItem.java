@@ -47,7 +47,7 @@ public class RegisterItem extends HttpServlet
     String  creationDate;
     int     itemId;
 
-    sp = new ServletPrinter(response, "RegisterItem");
+    sp = new ServletPrinter(response, "RegisterItem", getServletContext());
       
     Context initialContext = null;
     try

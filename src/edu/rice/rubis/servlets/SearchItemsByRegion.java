@@ -109,7 +109,7 @@ public class SearchItemsByRegion extends HttpServlet
     Integer page;
     Integer nbOfItems;
 
-    sp = new ServletPrinter(response, "SearchItemsByRegion");
+    sp = new ServletPrinter(response, "SearchItemsByRegion", getServletContext());
 
     try
     {

@@ -73,7 +73,7 @@ public class StoreComment extends HttpServlet
     String  comment; // user comment
     Integer rating;  // user rating
 
-    sp = new ServletPrinter(response, "StoreComment");
+    sp = new ServletPrinter(response, "StoreComment", getServletContext());
 
     /* Get and check all parameters */
 

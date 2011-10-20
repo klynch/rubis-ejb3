@@ -35,7 +35,7 @@ public class PutCommentAuth extends HttpServlet
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
     ServletPrinter sp = null;
-    sp = new ServletPrinter(response, "PubCommentAuth");
+    sp = new ServletPrinter(response, "PubCommentAuth", getServletContext());
     
     String to = request.getParameter("to");
     String item = request.getParameter("itemId");

@@ -46,7 +46,7 @@ public class SellItemForm extends HttpServlet
     String  categoryId=null, userId=null;
     Context initialContext = null;
 
-    sp = new ServletPrinter(response, "SellItemForm");
+    sp = new ServletPrinter(response, "SellItemForm", getServletContext());
     sp.printHTMLheader("RUBiS: Sell your item");
 
     try

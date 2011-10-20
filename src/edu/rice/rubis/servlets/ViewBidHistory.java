@@ -60,7 +60,7 @@ public class ViewBidHistory extends HttpServlet
     String  value = request.getParameter("itemId");
     Integer itemId;
     
-    sp = new ServletPrinter(response, "ViewBidHistory");
+    sp = new ServletPrinter(response, "ViewBidHistory", getServletContext());
 
     if ((value == null) || (value.equals("")))
     {

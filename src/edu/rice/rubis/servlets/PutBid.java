@@ -52,7 +52,7 @@ public class PutBid extends HttpServlet
     String itemStr = request.getParameter("itemId");
     String name = request.getParameter("nickname");
     String pass = request.getParameter("password");
-    sp = new ServletPrinter(response, "PubBid");
+    sp = new ServletPrinter(response, "PubBid", getServletContext());
     
     if ((itemStr == null) || (itemStr.equals("")) ||
         (name == null) || (name.equals(""))||

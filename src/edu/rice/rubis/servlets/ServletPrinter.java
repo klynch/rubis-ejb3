@@ -3,7 +3,7 @@ package edu.rice.rubis.servlets;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.rmi.PortableRemoteObject;
@@ -27,6 +27,7 @@ public class ServletPrinter
   private PrintWriter       out;
   private String            servletName;
   private GregorianCalendar startDate;
+  private ServletContext    servletContext;
 
 
   /**
@@ -35,7 +36,7 @@ public class ServletPrinter
    * @param toWebServer a <code>HttpServletResponse</code> value
    * @param callingServletName a <code>String</code> value
    */
-  public ServletPrinter(HttpServletResponse toWebServer, String callingServletName)
+  public ServletPrinter(HttpServletResponse toWebServer, String callingServletName, ServletContext servletContext)
   {
     startDate = new GregorianCalendar();
     toWebServer.setContentType("text/html");
@@ -48,14 +49,15 @@ public class ServletPrinter
       ioe.printStackTrace();
     }
     servletName = callingServletName;
+    this.servletContext = servletContext;
   }
 
   void printFile (String filename)
   {
-    FileReader fis = null;
+    InputStreamReader fis = null;
     try
     {
-      fis = new FileReader(filename);
+      fis = new InputStreamReader(servletContext.getResourceAsStream(filename));
       char[] data = new char[4*1024]; // 4K buffer
       int    bytesRead;
       bytesRead = fis.read(data);
